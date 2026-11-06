@@ -1,0 +1,16 @@
+{
+  "name": "seas-ai-agent",
+  "version": "1.0.0",
+  "description": "SEAS-AI-AGENT desktop app: your SEAS website in its own window with PC control",
+  "main": "main.js",
+  "author": "SEAS",
+  "scripts": { "start": "electron .", "safe": "electron . --safe", "dist": "electron-builder --win --publish never" },
+  "devDependencies": { "electron": "^33.0.0", "electron-builder": "^25.0.0" },
+  "build": {
+    "appId": "com.seas.aiagent",
+    "productName": "SEAS-AI-AGENT",
+    "files": ["main.js", "preload.js", "setup.html", "site.json"],
+    "win": { "target": "nsis", "icon": "build/icon.png" },
+    "nsis": { "oneClick": true, "perMachine": false, "deleteAppDataOnUninstall": false }
+  }
+}
