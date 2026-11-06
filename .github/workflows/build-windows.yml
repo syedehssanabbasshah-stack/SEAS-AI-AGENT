@@ -6,7 +6,6 @@ on:
       site_url:
         description: "Your SEAS website address, e.g. https://seas-ai-agent.pages.dev"
         required: false
-        required: false
   push:
     tags: ["v*"]
 
